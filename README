@@ -1,0 +1,26 @@
+usage: pred_ppi.py [-h] -i FASTA_FILE [-w W2V_MODEL] [-c CLF_MODEL]
+                   [-o OUT_FILE] [-n N_GRAM] [-s SWINDOW] [-t THRESHOLD]
+
+Predict protein-protein interaction sites in protein sequence. 
+
+EXAMPLE:
+python3 pred_ppi.py -i test.fasta
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i FASTA_FILE, --in FASTA_FILE
+                        FASTA file with one or multiple protein sequences.
+  -w W2V_MODEL, --w2v-model W2V_MODEL
+                        Pre-trained word2vec model.
+  -c CLF_MODEL, --classifier CLF_MODEL
+                        The classifier model.
+  -o OUT_FILE, --out OUT_FILE
+                        Save predict results to this file.
+  -n N_GRAM, --n-gram N_GRAM
+                        ngram_size when training the word2vec model.
+  -s SWINDOW, --sliding-window SWINDOW
+                        The sliding window size when representing each amino
+                        acid using the sliding window.
+  -t THRESHOLD, --threshold THRESHOLD
+                        Decision threshold to predict a sample as positive or
+                        negative. Default = 0.37
